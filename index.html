@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Tailwind Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
 </head>
@@ -81,7 +83,7 @@
         <div class="items-center flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
             <div class="pr-12">
-              <h1 class="text-white font-semibold text-5xl">
+              <h1 class="text-white font-semibold text-5xl" data-aos="fade-up">
                 Welcome your epiphany.
               </h1>
               <p class="mt-4 text-lg text-gray-300">
@@ -741,11 +743,27 @@
   </footer>
   <!-- End of Footer Section -->
 </body>
+
+<!-- AOS.js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Order matters -->
+
+<script>
+  AOS.init({
+    delay: 200,     // values from 0 - 3000 in 50ms steps
+    duration: 1500, // values from 0 - 3000 in 50ms steps 
+    once: false,    // should animation happen only once while scrolling down
+    mirror: false,  // should elements animate out while scrolling past them
+  });
+</script>
+
+
+
 <!-- Navigation Script -->
 <script>
   function toggleNavbar(collapseID) {
     document.getElementById(collapseID).classList.toggle("hidden");
     document.getElementById(collapseID).classList.toggle("block");
   }
+
 </script>
 </html>
